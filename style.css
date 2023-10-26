@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', serif;
+    font-weight: 300;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+.box{
+    width: 320px;
+    height:  520px;
+    border-radius: 5%;
+    background-color: hsl(216, 50%, 16%);
+    padding: 20px;
+}
+.box h1{
+    color: white;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+.box h1:hover{
+    color: hsl(178, 100%, 50%);
+}
+.box p{
+    font-size: 15px;
+    color: hsl(215, 51%, 70%);
+    padding-bottom: 20px;
+}
+.box hr{
+   border: 1px solid hsl(215, 32%, 27%);   
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.price .eth{
+    color: hsl(178, 100%, 50%);
+}
+.price .clock{
+    color:hsl(215, 51%, 70%);
+}
+.price img{
+    width: 15px;
+    height: 15px;
+}
+.creation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10px;
+    
+}
+.creation span{
+    color:hsl(215, 51%, 70%);
+    font-size: 15px;
+}
+.creation span .jul{
+    color: white;
+}
+.creation span .jul:hover{
+    color: hsl(178, 100%, 50%);
+}
+.creation img{
+    width: 30px;
+    height: 30px;
+}
+.image-container{
+    background-size: 100%;
+    background-image: url("./images/image-equilibrium.jpg");
+    width: 100%;
+    height: 55%;
+    border-radius: 10px;
+}
+.overlay {   
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%,.5);
+    opacity: 0;
+    border-radius: 10px;
+    transition: 0.3s opacity;
+  }
+.image-container .view{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: -50%;
+    left: 50%;
+    opacity: 0;
+}
+.image-container:hover .overlay{
+    opacity: 1;
+}
+.image-container:hover .view{
+    opacity: 1;
+}
+@media (max-width: 600px) {
+    .box {
+      max-width: 320px;
+      margin: 30px 0 0 0;
+    }
+  }
